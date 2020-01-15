@@ -9,6 +9,7 @@ namespace DataAccess
     class Connection : IConnection
     {
         private bool isOpen;
+        private string username;
         public IDatabase Database => throw new NotImplementedException();
 
         public void Close()
@@ -29,7 +30,7 @@ namespace DataAccess
 
         public string GetUsername()
         {
-            throw new NotImplementedException();
+            return username;
         }
 
         public bool IsOpen()
